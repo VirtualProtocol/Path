@@ -33,7 +33,9 @@ namespace Path.Character
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage()
+                    .AddJsonFile()
+                    .AddUserSecrets();
             }
 
             app.UseHttpsRedirection();
